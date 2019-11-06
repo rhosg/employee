@@ -1,8 +1,6 @@
 package com.global.sparta.rho.employees;
 
 
-import com.global.sparta.rho.display.DAO;
-
 import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -11,8 +9,8 @@ import java.util.*;
 
 public class FileReader {
     private final String PATH = "resources/EmployeeRecords.csv";
-    private List<Employee> employees;
-    private DAO dao = new DAO();
+    private Map<String, Employee> employees = new HashMap<>();
+    private Map<String, Employee> duplicates = new HashMap<>();
     private Employee employee;
     private BufferedReader br;
     private DateTimeFormatter dateTimeFormatter;
@@ -23,7 +21,6 @@ public class FileReader {
         try {
             java.io.FileReader fileRead = new java.io.FileReader(file);
             br = new BufferedReader(fileRead);
-            employees = new ArrayList<>();
             String line = "";
             br.readLine();
             while ((line = br.readLine()) != null) {
@@ -34,31 +31,24 @@ public class FileReader {
                         , employeeCharacteristics[4], employeeCharacteristics[5]
                         , employeeCharacteristics[6], LocalDate.parse(employeeCharacteristics[7], dateTimeFormatter)
                         , LocalDate.parse(employeeCharacteristics[8], dateTimeFormatter), Integer.parseInt(employeeCharacteristics[9]));
-                employees.add(employee);
+                dealWithDuplicates(employee);
             }
-
-
         } catch (FileNotFoundException e) {
             System.out.println("File cannot be found: " + file.toString());
         } catch (IOException e) {
             System.out.println("File cannot be read: " + file.toString());
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
-
     }
 
-    public void addToDatebase() {
-
-        dao.runSQLQuery(employees);
-
+    public void dealWithDuplicates(Employee employee) {
+        if (employees.containsKey(employee.getEmpID())) {
+            duplicates.put(employee.getEmpID(), employee);
+        } else {
+            employees.put(employee.getEmpID(), employee);
+        }
     }
 
+    public Map<String, Employee> returnArray (){
+        return employees;
+    }
 }

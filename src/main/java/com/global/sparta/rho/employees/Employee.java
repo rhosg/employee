@@ -1,11 +1,11 @@
 package com.global.sparta.rho.employees;
 
-import java.sql.Date;
+
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
 
 public class Employee {
-    //Emp ID,Name Prefix,First Name,Middle Initial,Last Name,E Mail,Date of Birth,Date of Joining,Salary
+
 
     private final String empID;
     private String namePrefix;
@@ -73,31 +73,9 @@ public class Employee {
         return salary;
     }
 
-
-    public void setNamePrefix(String namePrefix) {
-        this.namePrefix = namePrefix;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setMiddleInitial(String middleInitial) {
-        this.middleInitial = middleInitial;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public void setGender(String gender) {
         this.gender = gender;
     }
-
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
-    }
-
 
     public void setSalary(int salary) {
         this.salary = salary;

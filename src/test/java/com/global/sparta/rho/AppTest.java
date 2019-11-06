@@ -14,26 +14,23 @@ import java.sql.SQLException;
 import static org.junit.Assert.*;
 
 
-public class AppTest
-{
- FileReader fileReader;
- @Before
- public void setup() {
-     fileReader= new FileReader();
+public class AppTest {
+    FileReader fileReader;
 
- }
+    @Before
+    public void setup() {
+        fileReader = new FileReader();
+    }
 
-    @Test (expected = FileNotFoundException.class)
+    @Test(expected = FileNotFoundException.class)
     public void testFileNotFound() {
         File file = new File("resources/testemploys");
-      fileReader.readFile();
-
+        fileReader.readFile();
     }
 
-    @Test (expected = IOException.class)
+    @Test(expected = IOException.class)
     public void testFileCannotBeRead() {
     }
-
 
 
     @Test
@@ -43,11 +40,9 @@ public class AppTest
         assertNotNull(connection);
     }
 
-
     @Test
     public void testQuery() {
         String QUERY = "SELECT * FROM employees";
         fileReader.readFile();
-
     }
-    }
+}

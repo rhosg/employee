@@ -1,17 +1,23 @@
 package com.global.sparta.rho.display;
 
 import com.global.sparta.rho.employees.Employee;
+import com.global.sparta.rho.employees.FileReader;
 
 import java.sql.*;
-import java.util.List;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Map;
 
 
 public class DAO {
     private final String QUERY = "INSERT INTO employees VALUES(?,?,?,?,?,?,?,?,?,?)";
-
+    private int index = 0;
     private final String URL = "jdbc:mysql://localhost/Employees?user=root&password=";
 
-    public void runSQLQuery(List<Employee> employees) {
+
+    public void runSQLQuery(Employee[] employees) {
         try (Connection connection = DriverManager.getConnection(URL)) {
             PreparedStatement statement = connection.prepareStatement(QUERY);
             for (Employee employee : employees) {
@@ -30,8 +36,25 @@ public class DAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
 
+    }
+    public void addToDatabase(Map<String, Employee> employeeMap) {
+        Employee[] employeeArray = employeeMap.values().toArray(new Employee[employeeMap.size()]);
+        int employeeCount = employeeArray.length;
+        Thread[] threads = new Thread[100];
+        int threadCount = threads.length;
+        for (int i = 0; i < threads.length; i++) {
+            final int j = i;
+            Runnable runnable;
+            if ((employeeCount*(i + 1))/threadCount > employeeCount) {
+                runnable = () -> runSQLQuery(Arrays.copyOfRange(employeeArray, ((employeeCount * j) / threadCount), employeeCount));
+            } else {
+                runnable = () -> runSQLQuery(Arrays.copyOfRange(employeeArray, (employeeCount * j) / threadCount, (employeeCount * (j+1)) / threadCount));
+            }
+            threads[i] = new Thread(runnable);
+            threads[i].start();
+        }
+    }
 
 }
 
