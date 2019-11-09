@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2661c17c-0ae3-40c8-bedf-9e7e00ecf675" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/global/sparta/rho/PerformanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/display/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/display/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/EmployeeManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/EmployeeManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/global/sparta/rho/PerformanceTester.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Starter">
+  <component name="RunManager" selected="JUnit.PerformanceTest">
     <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.global.sparta.rho.management.Starter" />
       <module name="Employees" />
@@ -108,8 +116,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PerformanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Employees" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.global.sparta.rho.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.global.sparta.rho" />
+      <option name="MAIN_CLASS_NAME" value="com.global.sparta.rho.PerformanceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PerformanceTest" />
         <item itemvalue="Application.Starter" />
         <item itemvalue="JUnit.AppTest.testConnection" />
         <item itemvalue="JUnit.AppTest.testQuery" />
@@ -148,7 +172,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java</url>
-          <line>19</line>
+          <line>20</line>
           <properties class="com.global.sparta.rho.display.DAO" method="runSQLQuery">
             <option name="EMULATED" value="true" />
           </properties>
@@ -156,18 +180,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

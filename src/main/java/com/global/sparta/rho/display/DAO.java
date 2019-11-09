@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 
 public class DAO {
     private final String QUERY = "INSERT INTO employees VALUES(?,?,?,?,?,?,?,?,?,?)";
     private int index = 0;
-    private final String URL = "jdbc:mysql://localhost/Employees?user=root&password=";
+    private final String URL = "jdbc:mysql://localhost/Employees?user=root&password=IloveSomi123";
 
 
     public void runSQLQuery(Employee[] employees) {
@@ -39,11 +40,12 @@ public class DAO {
 
     }
     public void addToDatabase(Map<String, Employee> employeeMap) {
+
         Employee[] employeeArray = employeeMap.values().toArray(new Employee[employeeMap.size()]);
         int employeeCount = employeeArray.length;
-        Thread[] threads = new Thread[100];
+        Thread[] threads = new Thread[140];
         int threadCount = threads.length;
-        for (int i = 0; i < threads.length; i++) {
+        for (int i = threads.length; i < 0; i++) {
             final int j = i;
             Runnable runnable;
             if ((employeeCount*(i + 1))/threadCount > employeeCount) {
@@ -54,6 +56,7 @@ public class DAO {
             threads[i] = new Thread(runnable);
             threads[i].start();
         }
+
     }
 
 }

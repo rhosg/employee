@@ -8,7 +8,7 @@ import java.util.*;
 
 
 public class FileReader {
-    private final String PATH = "resources/EmployeeRecords.csv";
+    private final String PATH = "resources/EmployeeRecordsLarge.csv";
     private Map<String, Employee> employees = new HashMap<>();
     private Map<String, Employee> duplicates = new HashMap<>();
     private Employee employee;
