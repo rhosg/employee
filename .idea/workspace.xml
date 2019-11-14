@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2661c17c-0ae3-40c8-bedf-9e7e00ecf675" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/global/sparta/rho/PerformanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/employees/EmployeeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/management/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/global/sparta/rho/management/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/global/sparta/rho/PerformanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/global/sparta/rho/PerformanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/display/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/display/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/EmployeeManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/EmployeeManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/employees/FileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/global/sparta/rho/PerformanceTester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/management/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/sparta/rho/management/Starter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/global/sparta/rho/PerformanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/global/sparta/rho/PerformanceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +33,8 @@
   <component name="ProjectId" id="1SgwArX0D16yWQfWNLAofW7Nrjb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/mysql-connector-java-8.0.17.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -54,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PerformanceTest">
+  <component name="RunManager" selected="Application.Starter">
     <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.global.sparta.rho.management.Starter" />
       <module name="Employees" />
@@ -64,6 +65,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Employees" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.global.sparta.rho.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.global.sparta.rho" />
+      <option name="MAIN_CLASS_NAME" value="com.global.sparta.rho.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,22 +95,6 @@
       <option name="PACKAGE_NAME" value="com.global.sparta.rho" />
       <option name="MAIN_CLASS_NAME" value="com.global.sparta.rho.AppTest" />
       <option name="METHOD_NAME" value="testConnection" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.testFileNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Employees" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.global.sparta.rho.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.global.sparta.rho" />
-      <option name="MAIN_CLASS_NAME" value="com.global.sparta.rho.AppTest" />
-      <option name="METHOD_NAME" value="testFileNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PerformanceTest" />
         <item itemvalue="Application.Starter" />
+        <item itemvalue="JUnit.PerformanceTest" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.testConnection" />
         <item itemvalue="JUnit.AppTest.testQuery" />
-        <item itemvalue="JUnit.AppTest.testFileNotFound" />
       </list>
     </recent_temporary>
   </component>
@@ -170,18 +170,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java</url>
-          <line>20</line>
-          <properties class="com.global.sparta.rho.display.DAO" method="runSQLQuery">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/global/sparta/rho/display/DAO.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="9" />
+          <line>48</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

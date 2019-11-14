@@ -5,8 +5,6 @@ import java.time.LocalDate;
 
 
 public class Employee {
-
-
     private final String empID;
     private String namePrefix;
     private String firstName;

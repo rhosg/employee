@@ -33,7 +33,6 @@ public class PerformanceTest {
         private void printResults(long duration) {
             DecimalFormat decimalFormat = new DecimalFormat("###,###.####");
             System.out.println("Time taken "+ (decimalFormat.format(duration)) + " nano seconds");
-
         }
     }
 
